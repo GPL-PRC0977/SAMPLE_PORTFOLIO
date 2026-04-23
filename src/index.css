@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  :root {
+    --brand: #3B82F6;
+    --brand-light: #60A5FA;
+    --brand-dark: #2563EB;
+    --bg-dark: #050505;
+    --bg-card: #0f172a;
+    --border: #1e293b;
+    --text-muted: #94a3b8;
+  }
+
+  body {
+    @apply bg-[#050505] text-[#f8fafc] antialiased selection:bg-blue-500/30;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-[#050505];
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-800 rounded-full hover:bg-slate-700;
+  }
+}
+
+@layer utilities {
+  .hero-text {
+    @apply text-[64px] md:text-[110px] leading-[0.85] font-extrabold tracking-tighter;
+  }
+
+  .micro-label {
+    @apply text-[10px] uppercase tracking-[0.3em] font-semibold text-slate-500;
+  }
+
+  .tech-accent {
+    @apply text-[#3B82F6] font-mono;
+  }
+}
